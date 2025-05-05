@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東方クイズ</title>
+    <link rel="stylesheet" href="touhouquiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-plus-rounded-1c-regular">
+    <header>
+        <h1>東方projectクイズ</h1>
+        <p>東方Projectについての4択問題になります</p>
+    </header>
+    <main>
+        <h3 style="text-align: center;">
+            問題
+        </h3>
+        <div id="question_area">
+
+        </div>
+        <form name="answers">
+            <input type="radio" name="answer" id="answer1" value="1"><label for="answer1" id="label1"></label><br>
+            <input type="radio" name="answer" id="answer2" value="2"><label for="answer2" id="label2"></label><br>
+            <input type="radio" name="answer" id="answer3" value="3"><label for="answer3" id="label3"></label><br>
+            <input type="radio" name="answer" id="answer4" value="4"><label for="answer4" id="label4"></label>
+        </form>
+        <button type="button" onclick="answerCheck()">送信</button>
+        <h1 id="result"></h1>
+    </main>
+    <footer style="text-align: center; background-color: black; color: white;">
+        <p>© 2025 yashiro-tak   <a href="yashiro-tak.github.io/index.html">トップへ</a></p>
+    </footer>
+    <script src="touhouquiz.js"></script>
+</body>
+
+</html>
