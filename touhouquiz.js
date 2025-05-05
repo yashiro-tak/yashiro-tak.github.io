@@ -6,16 +6,16 @@ const label4 = document.getElementById('label4');
 const result = document.getElementById('result');
 
 const question_list = [
-    "博麗霊夢の職業は？",
-    "霧雨魔理沙の職業は？",
-    "東方紅魔郷のラスボスは？",
-    "レミリア・スカーレットの能力は？",
-    "フランドール・スカーレットの能力は？",
-    "十六夜咲夜の能力は？",
-    "パチュリー・ノーレッジの能力は？",
-    "アリス・マーガトロイドの能力は？",
-    "西行寺幽々子の能力は？",
-    "八雲紫の能力は？"
+    "<h3>博麗霊夢の職業は？</h3>",
+    "<h3>霧雨魔理沙の職業は？</h3>",
+    "<h3>東方紅魔郷のラスボスは？</h3>",
+    "<h3>レミリア・スカーレットの能力は？</h3>",
+    "<h3>フランドール・スカーレットの能力は？</h3>",
+    "<h3>十六夜咲夜の能力は？</h3>",
+    "<h3>パチュリー・ノーレッジの能力は？</h3>",
+    "<h3>アリス・マーガトロイドの能力は？</h3>",
+    "<h3>西行寺幽々子の能力は？</h3>",
+    "<h3>八雲紫の能力は？</h3>"
 ];
 const answer_list = [
     ["魔法使い", "ヴァンパイア", "メイド", "巫女"],
@@ -77,7 +77,7 @@ function answerCheck(){
 
 function startQuiz(){
     question_num = question_number;
-    question.innerText = question_list[question_num];
+    question.innerHTML = question_list[question_num];
     label1.innerText = answer_list[question_num][0];
     label2.innerText = answer_list[question_num][1];
     label3.innerText = answer_list[question_num][2];
