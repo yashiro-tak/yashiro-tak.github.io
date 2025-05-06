@@ -17,26 +17,29 @@
         <p>東方Projectについての4択問題になります</p>
     </header>
     <main>
-        <h3 style="text-align: center;">
-            問題
-        </h3>
         <div id="question_area">
+            <h3 style="text-align: center;">
+                問題
+            </h3>
+            <div id="question">
 
+            </div>
+            <form name="answers">
+                <input type="radio" name="answer" id="answer1" value="1"><label for="answer1" id="label1"></label><br>
+                <input type="radio" name="answer" id="answer2" value="2"><label for="answer2" id="label2"></label><br>
+                <input type="radio" name="answer" id="answer3" value="3"><label for="answer3" id="label3"></label><br>
+                <input type="radio" name="answer" id="answer4" value="4"><label for="answer4" id="label4"></label>
+            </form>
         </div>
-        <form name="answers">
-            <input type="radio" name="answer" id="answer1" value="1"><label for="answer1" id="label1"></label><br>
-            <input type="radio" name="answer" id="answer2" value="2"><label for="answer2" id="label2"></label><br>
-            <input type="radio" name="answer" id="answer3" value="3"><label for="answer3" id="label3"></label><br>
-            <input type="radio" name="answer" id="answer4" value="4"><label for="answer4" id="label4"></label>
-        </form>
-        <button type="button" onclick="answerCheck()">送信</button>
-        <button type="button" onclick="nextQuestion()">次の問題</button>
-        <button type="button" onclick="showResult()">結果</button>
-        <button type="button" onclick="resetQuiz()">リセット</button>
+        <div id="button_area">
+            <button type="button" id="resultOrNextButton" onclick="buttonFunction()"></button>
+            <button type="button" onclick="showResult()" id="resultButton" class="hide">結果</button>
+            <button type="button" onclick="resetQuiz()" id="resetButton">リセット</button>
+        </div>
         <h1 id="result"></h1>
     </main>
     <footer style="text-align: center; background-color: black; color: white;">
-        <p>© 2025 yashiro-tak   <a href="https:yashiro-tak.github.io">トップへ</a></p>
+        <p>© 2025 yashiro-tak <a href="https:yashiro-tak.github.io">トップへ</a></p>
     </footer>
     <script src="touhouquiz.js"></script>
 </body>
