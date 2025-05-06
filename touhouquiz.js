@@ -1,4 +1,5 @@
 const question = document.getElementById('question');
+const question_ber = document.getElementById('question_ber');
 const question_area = document.getElementById('question_area');
 const button_area = document.getElementById('button_area');
 const label1 = document.getElementById('label1');
@@ -82,7 +83,7 @@ window.addEventListener('DOMContentLoaded', function () {
 //答え合わせボタンを押したときの処理
 function answerCheck() {
 
-    question_count++;
+    
     question_list.splice(question_num, 1);
     answer_list.splice(question_num, 1);
     correct_answer_list.splice(question_num, 1);
@@ -95,12 +96,19 @@ function answerCheck() {
         wrong_count++;
     }
     resultMode = false;
-    button.innerText = "次の問題";
-    resultButton.classList.remove("hide");
+    if (question_count >= question_count_max) {
+        button.innerText = "結果発表";
+    }
+    else {
+        button.innerText = "次の問題";
+        resultButton.classList.remove("hide");
+    }
 }
 
 //ゲーム開始処理
 function startQuiz() {
+    question_count++;
+    question_ber.innerText = `${question_count}問目/${question_count_max}問中`;
     let input_answers = document.querySelectorAll("input[name=answer]");
     for (let element of input_answers) {
         element.checked = false;
