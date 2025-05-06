@@ -13,17 +13,17 @@ const resultButton = document.getElementById('resultButton');
 
 //問題リスト
 const question_list = [
-    "<h3>博麗霊夢の職業は？</h3>",
-    "<h3>白玉楼の庭師は？？</h3>",
-    "<h3>東方紅魔郷のラスボスは？</h3>",
-    "<h3>レミリア・スカーレットの能力は？</h3>",
-    "<h3>フランドール・スカーレットの能力は？</h3>",
-    "<h3>十六夜咲夜の能力は？</h3>",
-    "<h3>パチュリー・ノーレッジの能力は？</h3>",
-    "<h3>アリス・マーガトロイドの能力は？</h3>",
-    "<h3>西行寺幽々子の能力は？</h3>",
-    "<h3>八雲紫の能力は？</h3>",
-    "<h3>火焔猫燐ってなんて読む？</h3>"
+    "<h2>博麗霊夢の職業は？</h2>",
+    "<h2>白玉楼の庭師は？？</h2>",
+    "<h2>東方紅魔郷のラスボスは？</h2>",
+    "<h2>レミリア・スカーレットの能力は？</h2>",
+    "<h2>フランドール・スカーレットの能力は？</h2>",
+    "<h2>十六夜咲夜の能力は？</h2>",
+    "<h2>パチュリー・ノーレッジの能力は？</h2>",
+    "<h2>アリス・マーガトロイドの能力は？</h2>",
+    "<h2>西行寺幽々子の能力は？</h2>",
+    "<h2>八雲紫の能力は？</h2>",
+    "<h2>火焔猫燐ってなんて読む？</h2>"
 ];
 //選択肢リスト
 const answer_list = [
@@ -41,7 +41,7 @@ const answer_list = [
 ];
 //正解リスト
 const correct_answer_list = [
-    "4", "1", "1", "4", "2", "3", "4", "1", "2", "4", "1"
+    "4", "1", "1", "4", "2", "3", "4", "1", "2", "4", "2", "1"
 ];
 //正解の説明リスト
 const explanation_list = [
@@ -86,16 +86,19 @@ window.addEventListener('DOMContentLoaded', function () {
 //答え合わせボタンを押したときの処理
 function answerCheck() {
 
-    
+    let input_answers = document.querySelectorAll("input[name=answer]");
     question_list.splice(question_num, 1);
     answer_list.splice(question_num, 1);
     correct_answer_list.splice(question_num, 1);
     explanation_list.splice(question_num, 1);
+    
     if (selectedans === correctans) {
         result.innerText = `正解！${explanation}`;
+        input_answers[selectedans - 1].classList.add("correct");
         correct_count++;
     } else {
         result.innerText = `不正解！正解は${correctans}番です！`
+        input_answers[selectedans - 1].classList.add("incorrect");
         wrong_count++;
     }
     resultMode = false;
@@ -106,10 +109,18 @@ function answerCheck() {
         button.innerText = "次の問題";
         resultButton.classList.remove("hide");
     }
+    document.getElementById("answer1").disabled = true;
+    document.getElementById("answer2").disabled = true;
+    document.getElementById("answer3").disabled = true;
+    document.getElementById("answer4").disabled = true;
 }
 
 //ゲーム開始処理
 function startQuiz() {
+    document.getElementById("answer1").disabled = false;
+    document.getElementById("answer2").disabled = false;
+    document.getElementById("answer3").disabled = false;
+    document.getElementById("answer4").disabled = false;
     question_count++;
     question_ber.innerText = `${question_count}問目/${question_count_max}問中`;
     let input_answers = document.querySelectorAll("input[name=answer]");

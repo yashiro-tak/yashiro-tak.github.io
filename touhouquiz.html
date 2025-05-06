@@ -9,34 +9,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
 </head>
 
 <body class="m-plus-rounded-1c-regular" onload="startQuiz()">
     <header>
         <h1>東方projectクイズ</h1>
-        <p>東方Projectについての4択問題になります</p>
+        <p>東方Projectについての4択問題になります。</p>
     </header>
     <main>
-        <div id="question_area">
-            <h3 style="text-align: center;" id="question_ber">
-                
-            </h3>
-            <div id="question">
+        <div id="left_area">
+            <img src="" alt="">
+        </div>
+        <div id="quiz_area">
+            <div id="question_area">
+                <h3 style="text-align: center;" id="question_ber">
 
+                </h3>
+                <div id="question" style="text-align: center;">
+
+                </div>
+                <form name="answers" id="answers" style="margin: 0; padding: 0;">
+                    <input type="radio" name="answer" id="answer1" value="1"><label for="answer1"
+                        id="label1"></label>
+                    <input type="radio" name="answer" id="answer2" value="2"><label for="answer2"
+                        id="label2"></label>
+                    <input type="radio" name="answer" id="answer3" value="3"><label for="answer3"
+                        id="label3"></label>
+                    <input type="radio" name="answer" id="answer4" value="4"><label for="answer4" id="label4"></label>
+                </form>
             </div>
-            <form name="answers">
-                <input type="radio" name="answer" id="answer1" value="1"><label for="answer1" id="label1"></label><br>
-                <input type="radio" name="answer" id="answer2" value="2"><label for="answer2" id="label2"></label><br>
-                <input type="radio" name="answer" id="answer3" value="3"><label for="answer3" id="label3"></label><br>
-                <input type="radio" name="answer" id="answer4" value="4"><label for="answer4" id="label4"></label>
-            </form>
+            <div id="button_area" style="margin-top: 5px;">
+                <button type="button" id="resultOrNextButton" onclick="buttonFunction()" style="margin-left: 0;"></button>
+                <button type="button" onclick="showResult()" id="resultButton" class="hide">結果</button>
+                <button type="button" onclick="resetQuiz()" id="resetButton">リセット</button>
+            </div>
+            <h3 id="result"></h3>
         </div>
-        <div id="button_area">
-            <button type="button" id="resultOrNextButton" onclick="buttonFunction()"></button>
-            <button type="button" onclick="showResult()" id="resultButton" class="hide">結果</button>
-            <button type="button" onclick="resetQuiz()" id="resetButton">リセット</button>
+        <div id="right_area">
+            <img src="" alt="">
         </div>
-        <h1 id="result"></h1>
     </main>
     <footer style="text-align: center; background-color: black; color: white;">
         <p>© 2025 yashiro-tak <a href="https:yashiro-tak.github.io">トップへ</a></p>
