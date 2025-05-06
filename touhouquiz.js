@@ -132,7 +132,7 @@ function resetQuiz() {
 }
 //結果ボタンを押したときの処理
 function showResult() {
-    let correctratio = correct_count / (question_count) * 100;
+    let correctratio = Math.round(correct_count / (question_count) * 100);
     result.innerText = `正解数：${correct_count}問、不正解数：${wrong_count}問、正答率：${correctratio}%`;
     question_area.classList.add("hide");
     button.classList.add("hide");
