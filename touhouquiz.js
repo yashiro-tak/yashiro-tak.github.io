@@ -81,6 +81,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 //答え合わせボタンを押したときの処理
 function answerCheck() {
+
     question_count++;
     question_list.splice(question_num, 1);
     answer_list.splice(question_num, 1);
@@ -106,6 +107,7 @@ function startQuiz() {
       }
     result.innerText = "";
     button.innerText = "答え合わせ";
+    resultButton.classList.add("hide");
     question_num = Math.floor(Math.random() * question_list.length);
     question.innerHTML = question_list[question_num];
     label1.innerText = answer_list[question_num][0];
