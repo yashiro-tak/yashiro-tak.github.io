@@ -117,15 +117,14 @@ function answerCheck() {
 
 //ゲーム開始処理
 function startQuiz() {
-    document.getElementById("answer1").disabled = false;
-    document.getElementById("answer2").disabled = false;
-    document.getElementById("answer3").disabled = false;
-    document.getElementById("answer4").disabled = false;
     question_count++;
     question_ber.innerText = `${question_count}問目/${question_count_max}問中`;
     let input_answers = document.querySelectorAll("input[name=answer]");
     for (let element of input_answers) {
         element.checked = false;
+        element.classList.remove("correct");
+        element.classList.remove("incorrect");
+        element.disabled = false;
       }
     result.innerText = "";
     button.innerText = "答え合わせ";
