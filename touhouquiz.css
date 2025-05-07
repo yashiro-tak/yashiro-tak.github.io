@@ -92,12 +92,16 @@ footer {
     width: 100%;
     margin: auto;
     margin-left: 5px;
+    margin-bottom: 5px;
   }
 
   button:hover {
     background-color: darkred;
   }
-
+  #result {
+    margin: auto;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -159,9 +163,13 @@ footer {
     margin-left: auto;
     margin-right: 5px;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 5px;
   }
   #resetButton {
     margin-right: 0;
+  }
+  #result{
+    margin: auto;
+    width: 100%;
   }
 }
