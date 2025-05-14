@@ -10,6 +10,8 @@ const result = document.getElementById('result');
 const button = document.getElementById('resultOrNextButton');
 const resetButton = document.getElementById('resetButton');
 const resultButton = document.getElementById('resultButton');
+const openButton = document.getElementById('openButton');
+const closeButton = document.getElementById('closeButton');
 
 //問題リスト
 const question_list = [
@@ -39,7 +41,7 @@ const answer_list = [
     ["運命を操る程度の能力", "死を操る程度の能力", "奇跡を起こす程度の能力", "境界を操る程度の能力"],
     ["運命を操る程度の能力", "空を飛ぶ程度の能力", "奇跡を起こす程度の能力", "境界を操る程度の能力"],
     ["かえんびょうりん", "かえんねこりん", "ひおどしびょうりん", "ひおどしねこりん"],
-    ["芥川竜之介の河童", "人恋し神様", "神々が恋した幻想郷", "ハートフェクトファンシー"]
+    ["芥川竜之介の河童", "人恋し神様", "神々が恋した幻想郷", "旧地獄街道を征く"]
 ];
 //正解リスト
 const correct_answer_list = [
@@ -58,7 +60,7 @@ const explanation_list = [
     "西行寺幽々子の能力は死を操る程度の能力です。",
     "八雲紫の能力は境界を操る程度の能力です。",
     "火焔猫燐はかえんびょうりんと読みます。",
-    "左から順に3面ボス、1面道中、3面道中、地霊殿4面道中です。"
+    "左から順に3面ボス、1面道中、3面道中、地霊殿3面道中です。"
 ];
 let correctans;
 let selectedans;
@@ -168,3 +170,10 @@ function buttonFunction() {
         }
     }
 }
+openButton.addEventListener('click', function(){
+    tips.showModal();
+});
+
+closeButton.addEventListener('click', function(){
+    tips.close();
+});

@@ -14,9 +14,20 @@
 </head>
 
 <body class="m-plus-rounded-1c-regular" onload="startQuiz()">
+    <dialog id="tips">
+        <h2>遊び方</h2>
+        <ul>
+            <li>問題数の分母が全部の問題数、分子が今の問題です。</li>
+            <li>答えだと思う選択肢を選んで、「答え合わせ」を押すと答え合わせできます。</li>
+            <li>答え合わせ画面では「次の問題」を押せば次の問題に進み、「結果」を押せばゲームを終了してゲーム結果を閲覧できます。用意されている問題をすべて解いていた場合は「次の問題」が「結果発表」になります。</li>
+            <li>「リセット」ボタンを押せばゲームがリセットされます。</li>
+        </ul>
+        <p>このゲームは上海アリス幻樂団作成の「東方project」の2次創作です。</p>
+        <button id="closeButton">閉じる</button>
+    </dialog>
     <header>
         <h1>東方projectクイズ</h1>
-        <p>東方Projectについての4択問題になります。<button style="width: auto; background-color: yellow; color: black;">遊び方</button></p>
+        <p>東方Projectについての4択問題になります。<button style="width: auto; background-color: yellow; color: black;" id="openButton">遊び方</button></p>
     </header>
     <main>
         <div id="left_area">
