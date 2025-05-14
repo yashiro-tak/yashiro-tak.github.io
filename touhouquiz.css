@@ -173,3 +173,6 @@ footer {
     width: 100%;
   }
 }
+li{
+  display: list-item;
+}
